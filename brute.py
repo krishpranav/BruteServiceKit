@@ -32,7 +32,7 @@ def author():
         print("DO NOT FORGET TO FOLLOW ME ON GITHUB \n")
         print("GITHUB LINK https://www.github.com/krishpranav")
 
-os.system("figlet BruteServiceKit")
+ 
 
 def continue_or_not():
     try:
