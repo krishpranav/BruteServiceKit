@@ -1,4 +1,5 @@
 import socket
+import os 
 from os import system, name, path
 
 class Color:
@@ -25,14 +26,13 @@ def info(victim, protocol):
     print(Color.yellow_bold+'[i]'+Color.no_colored+' Target: '+Color.white_bold+'{}'.format(victim))
     print(Color.no_colored+'    Protocol: '+Color.white_bold+'{}'.format(protocol))
 
-
-
+    
 def author():
         print("TOOL IS CREATED BY KRISHNA PRANAV \n ")
         print("DO NOT FORGET TO FOLLOW ME ON GITHUB \n")
         print("GITHUB LINK https://www.github.com/krishpranav")
 
-
+os.system("figlet BruteServiceKit")
 
 def continue_or_not():
     try:
