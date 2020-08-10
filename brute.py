@@ -108,6 +108,7 @@ def username(choice):
     except KeyboardInterrupt:
         print()
         print(Color.white_bold+'Exiting...')
+        author()
         exit()
     except IndexError:
         invalid_choice()
