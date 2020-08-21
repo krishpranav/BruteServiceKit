@@ -78,6 +78,7 @@ def check_port(victim, port):
 
 
 def change_port(victim):
+    banner()
     try:
         port = int(input(Color.blue_bold+'[?]'+Color.no_colored+' Enter the port you want to crack:'+Color.white_bold+' '))
 
