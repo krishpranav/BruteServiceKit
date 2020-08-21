@@ -10,7 +10,18 @@ class Color:
     red_bold = "\033[1;91m"
     yellow_bold = "\033[1;33m"
 
+    
+def banner():
+    print("""
+    __________                __           _________                  .__              ____  __.__  __   
+    \______   \_______ __ ___/  |_  ____  /   _____/ ______________  _|__| ____  ____ |    |/ _|__|/  |_ 
+    |    |  _/\_  __ \  |  \   __\/ __ \ \_____  \_/ __ \_  __ \  \/ /  |/ ___\/ __ \|      < |  \   __\
+    |    |   \ |  | \/  |  /|  | \  ___/ /        \  ___/|  | \/\   /|  \  \__\  ___/|    |  \|  ||  |  
+    |______  / |__|  |____/ |__|  \___  >_______  /\___  >__|    \_/ |__|\___  >___  >____|__ \__||__|  
+            \/                         \/        \/     \/                    \/    \/        \/         
+    """)
 
+   
 def clear():
     if name == 'nt':
         system('cls')
@@ -50,7 +61,7 @@ def continue_or_not():
 
     except (KeyboardInterrupt, IndexError):
         print("You Pressed CTRL+C exitting....")
-
+        banner()
         author()
 
 
@@ -82,7 +93,7 @@ def change_port(victim):
         print()
         print(Color.white_bold+'Exiting...')
         author()
-
+        banner()
         exit()
     except ValueError:
         print(Color.red_bold+'[!]'+Color.no_colored+' Invalid Input')
@@ -108,6 +119,7 @@ def username(choice):
     except KeyboardInterrupt:
         print()
         print(Color.white_bold+'Exiting...')
+        banner()
         author()
         exit()
     except IndexError:
@@ -228,6 +240,8 @@ def menu_tool(victim, protocol):
     except KeyboardInterrupt:
         print()
         print(Color.white_bold+'Exiting...')
+        banner()
+        author()
         exit()
     except ValueError:
         invalid_choice()
@@ -334,6 +348,9 @@ def ncrack(victim, protocol):
         print()
         print(Color.white_bold+'Exiting...')
         exit()
+        author()
+        banner()
+        
     except IndexError:
         invalid_choice()
 
@@ -418,6 +435,8 @@ def medusa(victim, protocol):
     except KeyboardInterrupt:
         print()
         print(Color.white_bold+'Exiting...')
+        banner()
+        author()
         exit()
     except IndexError:
         invalid_choice()
@@ -505,6 +524,8 @@ def hydra(victim, protocol):
     except KeyboardInterrupt:
         print()
         print(Color.yellow_bold+'Exiting...')
+        banner()
+        author()
         exit()
     except IndexError:
         invalid_choice()
