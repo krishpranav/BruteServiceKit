@@ -8,7 +8,6 @@ Steps to run this tool:
   4. python3 -m pip install -r requirements.txt (if you have python already installed means you don't want to run this command)
   5. python3 brute.py
   
-  ### you want socket and os to run this tool
 
   USE VPN OR PROXYCHAINS TO BE ANONYMOUS :)
     TOOL IS CREATED BY KRISNA PRANAV
