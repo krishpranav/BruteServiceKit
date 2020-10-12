@@ -36,7 +36,6 @@ def info(victim, protocol):
 
 def continue_or_not():
     try:
-        print()
         choice = str(input(Color.blue_bold+'[?]'+Color.no_colored+' Do you want to continue? [Y/n]:'+Color.white_bold+' '))
 
         if choice[0].upper() == 'Y':
@@ -139,7 +138,7 @@ def password():
 
 def start():
     try:
-
+        banner()
         victim = str(input(Color.blue_bold+'[?]'+Color.no_colored+' Enter Your Target Website Address:'+Color.white_bold+' '))
 
         if len(victim) == 0:
@@ -176,7 +175,7 @@ def menu(victim):
 
     [3] PostgreSQL                [4] SSH
 
-    [5] RDP                       [6] VNC)\n""",Color.blue_bold)
+    [5] RDP                       [6] VNC\n""",Color.blue_bold)
         protocol = int(input(Color.blue_bold+'[?]'+Color.no_colored+' Which protocol do you want to crack? [1-6]:'+Color.white_bold+' '))
 
         if protocol == 1:
