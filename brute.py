@@ -12,14 +12,7 @@ class Color:
 
     
 def banner():
-    print("""
-    __________                __           _________                  .__              ____  __.__  __   
-    \______   \_______ __ ___/  |_  ____  /   _____/ ______________  _|__| ____  ____ |    |/ _|__|/  |_ 
-    |    |  _/\_  __ \  |  \   __\/ __ \ \_____  \_/ __ \_  __ \  \/ /  |/ ___\/ __ \|      < |  \   __\
-    |    |   \ |  | \/  |  /|  | \  ___/ /        \  ___/|  | \/\   /|  \  \__\  ___/|    |  \|  ||  |  
-    |______  / |__|  |____/ |__|  \___  >_______  /\___  >__|    \_/ |__|\___  >___  >____|__ \__||__|  
-            \/                         \/        \/     \/                    \/    \/        \/         
-    """)
+    os.system("figlet BRUTESERVICEKIT | lolcat")
 
    
 def clear():
@@ -37,11 +30,7 @@ def info(victim, protocol):
     print(Color.yellow_bold+'[i]'+Color.no_colored+' Target: '+Color.white_bold+'{}'.format(victim))
     print(Color.no_colored+'    Protocol: '+Color.white_bold+'{}'.format(protocol))
 
-    
-def author():
-        print("TOOL IS CREATED BY KRISHNA PRANAV \n ")
-        print("DO NOT FORGET TO FOLLOW ME ON GITHUB \n")
-        print("GITHUB LINK https://www.github.com/krishpranav")
+
 
  
 
@@ -57,12 +46,13 @@ def continue_or_not():
         else:
             print()
 
-            author()
+            banner()
+            print("Exiting")
 
     except (KeyboardInterrupt, IndexError):
         print("You Pressed CTRL+C exitting....")
         banner()
-        author()
+
 
 
 def check_port(victim, port):
@@ -94,7 +84,7 @@ def change_port(victim):
     except KeyboardInterrupt:
         print()
         print(Color.white_bold+'Exiting...')
-        author()
+
         banner()
         exit()
     except ValueError:
@@ -122,7 +112,7 @@ def username(choice):
         print()
         print(Color.white_bold+'Exiting...')
         banner()
-        author()
+
         exit()
     except IndexError:
         invalid_choice()
@@ -149,6 +139,7 @@ def password():
 
 def start():
     try:
+
         victim = str(input(Color.blue_bold+'[?]'+Color.no_colored+' Enter Your Target Website Address:'+Color.white_bold+' '))
 
         if len(victim) == 0:
@@ -243,7 +234,7 @@ def menu_tool(victim, protocol):
         print()
         print(Color.white_bold+'Exiting...')
         banner()
-        author()
+
         exit()
     except ValueError:
         invalid_choice()
@@ -350,7 +341,7 @@ def ncrack(victim, protocol):
         print()
         print(Color.white_bold+'Exiting...')
         exit()
-        author()
+
         banner()
         
     except IndexError:
@@ -438,7 +429,7 @@ def medusa(victim, protocol):
         print()
         print(Color.white_bold+'Exiting...')
         banner()
-        author()
+
         exit()
     except IndexError:
         invalid_choice()
@@ -527,7 +518,7 @@ def hydra(victim, protocol):
         print()
         print(Color.yellow_bold+'Exiting...')
         banner()
-        author()
+
         exit()
     except IndexError:
         invalid_choice()
